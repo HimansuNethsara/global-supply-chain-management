@@ -1,0 +1,15 @@
+.dashboard-footer {
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 16px 0;
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 20;
+}
+.dashboard-footer .footer-text { color: rgba(255, 255, 255, 0.15); font-size: 10px; }
+.dashboard-footer .footer-link { color: rgba(255, 255, 255, 0.2); font-size: 10px; text-decoration: none; transition: all 0.3s ease; }
+.dashboard-footer .footer-link:hover { color: rgba(255, 255, 255, 0.5); }
+.dashboard-footer .footer-divider { color: rgba(255, 255, 255, 0.06); }

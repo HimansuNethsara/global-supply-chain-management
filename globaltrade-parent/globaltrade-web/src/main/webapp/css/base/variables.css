@@ -1,0 +1,6 @@
+:root {
+    --glass-blur: 10px;
+    --glass-reflex-degree: 45deg;
+    --glass-reflex-opacity: 0.5;
+    --glass-text-shadow-opacity: 0.3;
+}

@@ -1,0 +1,41 @@
+/* =========================================================
+   DASHBOARD LAYOUT
+   ========================================================= */
+
+.dashboard-container {
+    min-height: 100vh;
+    @apply bg-[#0a0a0a] overflow-visible;
+    background-image:
+            radial-gradient(ellipse at 20% 50%, rgba(220, 20, 60, 0.05) 0%, transparent 60%),
+            radial-gradient(ellipse at 80% 20%, rgba(139, 0, 0, 0.03) 0%, transparent 50%);
+}
+
+.main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 60px;
+}
+
+@media (min-width: 1024px) {
+    .main-content-wrapper {
+        margin-left: 260px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .main-content-wrapper {
+        margin-left: 0;
+    }
+}
+
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 24px;
+}
+
+.container {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}

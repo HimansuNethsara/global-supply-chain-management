@@ -1,0 +1,38 @@
+.header-glass {
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.header-user-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #dc143c, #8b0000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 0 20px rgba(220, 20, 60, 0.2);
+}
+.header-btn {
+    padding: 6px 14px;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.header-btn:hover { color: #ffffff; background: rgba(255, 255, 255, 0.06); }
+.header-btn i { font-size: 14px; }
+.header-btn.active { color: #dc143c; background: rgba(220, 20, 60, 0.1); }
+.header-btn-logout { color: rgba(255, 255, 255, 0.4); }
+.header-btn-logout:hover { color: #dc143c; background: rgba(220, 20, 60, 0.1); }

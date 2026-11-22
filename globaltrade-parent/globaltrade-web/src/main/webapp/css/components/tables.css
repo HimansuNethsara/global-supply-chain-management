@@ -1,0 +1,96 @@
+/* ===== TRANSACTION TABLE ===== */
+.transaction-table {
+    width: 100%;
+    min-width: 1200px;
+    font-size: 13px;
+    border-collapse: collapse;
+}
+
+.transaction-table th {
+    text-align: left;
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: 500;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    background: rgba(10, 10, 10, 0.95);
+    z-index: 2;
+}
+
+.transaction-table td {
+    padding: 12px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    color: rgba(255, 255, 255, 0.6);
+    vertical-align: middle;
+}
+
+.transaction-table tr:hover td {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* ===== TABLE SCROLL WRAPPER ===== */
+.table-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(220, 20, 60, 0.3) transparent;
+    margin: 0 -4px;
+    padding: 0 4px;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 3px;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(220, 20, 60, 0.3);
+    border-radius: 3px;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar-thumb:hover {
+    background: rgba(220, 20, 60, 0.5);
+}
+
+/* ===== PROFILE TABLE ===== */
+.profile-table {
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.profile-table thead th {
+    background: rgba(255, 255, 255, 0.02);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.profile-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.profile-table td {
+    vertical-align: top;
+    padding: 8px 16px;
+}
+
+.profile-table td label {
+    display: block;
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 10px;
+    font-weight: 400;
+    margin-bottom: 1px;
+}
+
+.profile-table td .text-white\/80 {
+    color: rgba(255, 255, 255, 0.7);
+}

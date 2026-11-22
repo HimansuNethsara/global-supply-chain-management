@@ -1,0 +1,1045 @@
+/* =============================================
+   GLOBAL MODAL BASE STYLES
+   ============================================= */
+
+/* Base overlay - used by all modals */
+.modal-overlay,
+.role-modal-overlay,
+.delete-modal-overlay,
+.status-modal-overlay,
+.about-modal-overlay,
+.contact-modal-overlay,
+.terms-modal-overlay,
+.update-quantity-modal-overlay {
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    z-index: 99999 !important;
+    display: none !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px !important;
+}
+
+.modal-overlay.open,
+.role-modal-overlay.active,
+.delete-modal-overlay.active,
+.status-modal-overlay.active,
+.about-modal-overlay.active,
+.contact-modal-overlay.active,
+.terms-modal-overlay.active,
+.update-quantity-modal-overlay.active {
+    display: flex !important;
+}
+
+/* Base content - used by all modals */
+.modal-content,
+.role-modal-content,
+.delete-modal-content,
+.status-modal-content,
+.about-modal-content,
+.contact-modal-content,
+.terms-modal-content,
+.update-quantity-modal-content {
+    background: rgba(10, 10, 10, 0.98) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 20px !important;
+    padding: 32px !important;
+    width: 100% !important;
+    transform: scale(0.95) !important;
+    opacity: 0 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Size variants */
+.modal-content { max-width: 500px; }
+.role-modal-content { max-width: 480px; }
+.delete-modal-content { max-width: 440px; }
+.status-modal-content { max-width: 480px; }
+.about-modal-content { max-width: 560px; }
+.contact-modal-content { max-width: 580px; }
+.terms-modal-content { max-width: 620px; }
+.update-quantity-modal-content { max-width: 580px !important; }
+
+.modal-overlay.open .modal-content,
+.role-modal-overlay.active .role-modal-content,
+.delete-modal-overlay.active .delete-modal-content,
+.status-modal-overlay.active .status-modal-content,
+.about-modal-overlay.active .about-modal-content,
+.contact-modal-overlay.active .contact-modal-content,
+.terms-modal-overlay.active .terms-modal-content,
+.update-quantity-modal-overlay.active .update-quantity-modal-content {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+}
+
+/* Scrollbar for tall content */
+.role-modal-content::-webkit-scrollbar,
+.about-modal-content::-webkit-scrollbar,
+.contact-modal-content::-webkit-scrollbar,
+.terms-modal-content::-webkit-scrollbar,
+.update-quantity-modal-content::-webkit-scrollbar {
+    width: 4px !important;
+}
+
+.role-modal-content::-webkit-scrollbar-track,
+.about-modal-content::-webkit-scrollbar-track,
+.contact-modal-content::-webkit-scrollbar-track,
+.terms-modal-content::-webkit-scrollbar-track,
+.update-quantity-modal-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03) !important;
+}
+
+.role-modal-content::-webkit-scrollbar-thumb,
+.about-modal-content::-webkit-scrollbar-thumb,
+.contact-modal-content::-webkit-scrollbar-thumb,
+.terms-modal-content::-webkit-scrollbar-thumb,
+.update-quantity-modal-content::-webkit-scrollbar-thumb {
+    background: rgba(220, 20, 60, 0.3) !important;
+    border-radius: 4px !important;
+}
+
+.role-modal-content,
+.about-modal-content,
+.contact-modal-content,
+.terms-modal-content,
+.update-quantity-modal-content {
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+}
+
+
+/* =============================================
+   MODAL HEADER (shared)
+   ============================================= */
+
+.modal-header,
+.role-modal-header,
+.delete-modal-header,
+.status-modal-header,
+.about-modal-header,
+.contact-modal-header,
+.terms-modal-header,
+.update-quantity-modal-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 4px !important;
+}
+
+.modal-header h3,
+.role-modal-header h3,
+.delete-modal-header h3,
+.status-modal-header h3,
+.about-modal-header h3,
+.contact-modal-header h3,
+.terms-modal-header h3,
+.update-quantity-modal-header h3 {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+}
+
+.modal-header .close-btn,
+.role-modal-header .close-btn,
+.delete-modal-header .close-btn,
+.status-modal-header .close-btn,
+.about-modal-header .close-btn,
+.contact-modal-header .close-btn,
+.terms-modal-header .close-btn,
+.update-quantity-modal-header .close-btn {
+    color: rgba(255, 255, 255, 0.3) !important;
+    background: none !important;
+    border: none !important;
+    font-size: 1.25rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    padding: 4px 8px !important;
+    border-radius: 8px !important;
+}
+
+.modal-header .close-btn:hover,
+.role-modal-header .close-btn:hover,
+.delete-modal-header .close-btn:hover,
+.status-modal-header .close-btn:hover,
+.about-modal-header .close-btn:hover,
+.contact-modal-header .close-btn:hover,
+.terms-modal-header .close-btn:hover,
+.update-quantity-modal-header .close-btn:hover {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.modal-subtitle,
+.role-modal-subtitle,
+.delete-modal-subtitle,
+.status-modal-subtitle,
+.about-modal-subtitle,
+.contact-modal-subtitle,
+.terms-modal-subtitle,
+.update-quantity-modal-subtitle {
+    color: rgba(255, 255, 255, 0.3) !important;
+    font-size: 0.75rem !important;
+    margin-bottom: 20px !important;
+}
+
+.delete-modal-subtitle,
+.status-modal-subtitle,
+.about-modal-subtitle {
+    text-align: left !important;
+}
+
+
+/* =============================================
+   BUTTONS (shared)
+   ============================================= */
+
+.btn-cancel {
+    flex: 1 !important;
+    padding: 10px 16px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 10px !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.btn-cancel:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.btn-danger,
+.btn-delete,
+.btn-update {
+    flex: 1 !important;
+    padding: 10px 16px !important;
+    background: linear-gradient(135deg, #dc143c, #8b0000) !important;
+    border: none !important;
+    border-radius: 10px !important;
+    color: #ffffff !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    font-family: 'Inter', sans-serif !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+}
+
+.btn-danger:hover,
+.btn-delete:hover,
+.btn-update:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 8px 25px rgba(220, 20, 60, 0.3) !important;
+}
+
+.btn-danger:active,
+.btn-delete:active,
+.btn-update:active {
+    transform: scale(0.97) !important;
+}
+
+.btn-update:disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+}
+
+.modal-actions,
+.delete-modal-actions,
+.status-modal-actions,
+.update-quantity-modal-actions {
+    display: flex !important;
+    gap: 12px !important;
+}
+
+
+/* =============================================
+   ROLE SELECTION MODAL (specific)
+   ============================================= */
+
+.role-option-btn {
+    width: 100% !important;
+    text-align: left !important;
+    padding: 12px 16px !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    cursor: pointer !important;
+    margin-bottom: 8px !important;
+    color: #ffffff !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.role-option-btn:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-color: rgba(220, 20, 60, 0.3) !important;
+    transform: translateX(4px) !important;
+}
+
+.role-option-btn:active {
+    transform: scale(0.98) !important;
+}
+
+.role-option-btn .icon-wrapper {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    border-radius: 10px !important;
+    background: rgba(220, 20, 60, 0.08) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #dc143c !important;
+    font-size: 16px !important;
+    transition: all 0.3s ease !important;
+}
+
+.role-option-btn:hover .icon-wrapper {
+    background: rgba(220, 20, 60, 0.15) !important;
+}
+
+.role-option-btn .role-info {
+    flex: 1 !important;
+}
+
+.role-option-btn .role-info .name {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+    font-size: 0.875rem !important;
+}
+
+.role-option-btn .role-info .desc {
+    color: rgba(255, 255, 255, 0.3) !important;
+    font-size: 0.7rem !important;
+}
+
+.role-option-btn .arrow-icon {
+    color: rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+.role-option-btn:hover .arrow-icon {
+    color: #dc143c !important;
+    transform: translateX(4px) !important;
+}
+
+
+/* =============================================
+   DELETE MODAL (specific)
+   ============================================= */
+
+.delete-modal-content { text-align: center !important; }
+
+.delete-icon-wrapper {
+    width: 72px !important;
+    height: 72px !important;
+    margin: 0 auto 16px !important;
+    border-radius: 50% !important;
+    background: rgba(220, 20, 60, 0.1) !important;
+    border: 2px solid rgba(220, 20, 60, 0.2) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.delete-icon-wrapper i {
+    font-size: 28px !important;
+    color: #dc143c !important;
+}
+
+.delete-modal-message {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.875rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+}
+
+.delete-modal-warning {
+    background: rgba(220, 20, 60, 0.06) !important;
+    border: 1px solid rgba(220, 20, 60, 0.12) !important;
+    border-radius: 10px !important;
+    padding: 10px 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-bottom: 24px !important;
+}
+
+.delete-modal-warning i {
+    color: #dc143c !important;
+    font-size: 14px !important;
+    flex-shrink: 0 !important;
+}
+
+.delete-modal-warning span {
+    color: rgba(220, 20, 60, 0.6) !important;
+    font-size: 0.7rem !important;
+    text-align: left !important;
+    line-height: 1.4 !important;
+}
+
+
+/* =============================================
+   STATUS MODAL (specific)
+   ============================================= */
+
+.status-modal-body .form-group {
+    margin-bottom: 16px !important;
+}
+
+.status-modal-body .form-group label {
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 0.7rem !important;
+    font-weight: 500 !important;
+    display: block !important;
+    margin-bottom: 6px !important;
+}
+
+.status-modal-body .current-status-display {
+    padding: 10px 14px !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 10px !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.875rem !important;
+}
+
+.status-modal-body .current-status-display .status-badge {
+    display: inline-block !important;
+    padding: 2px 10px !important;
+    border-radius: 6px !important;
+    font-size: 0.7rem !important;
+    font-weight: 500 !important;
+}
+
+.status-modal-body .current-status-display .status-badge.completed {
+    background: rgba(34, 197, 94, 0.15) !important;
+    color: #22c55e !important;
+}
+
+.status-modal-body .current-status-display .status-badge.pending {
+    background: rgba(251, 191, 36, 0.15) !important;
+    color: #fbbf24 !important;
+}
+
+.status-modal-body .current-status-display .status-badge.failed {
+    background: rgba(239, 68, 68, 0.15) !important;
+    color: #ef4444 !important;
+}
+
+.status-modal-body .select-wrapper {
+    position: relative !important;
+}
+
+.status-modal-body select {
+    width: 100% !important;
+    padding: 10px 36px 10px 14px !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 10px !important;
+    color: #ffffff !important;
+    font-size: 0.875rem !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.status-modal-body select:focus {
+    outline: none !important;
+    border-color: rgba(220, 20, 60, 0.3) !important;
+}
+
+.status-modal-body select option {
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+}
+
+.status-modal-body .select-wrapper .select-arrow {
+    position: absolute !important;
+    right: 14px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: rgba(255, 255, 255, 0.2) !important;
+    pointer-events: none !important;
+    font-size: 0.7rem !important;
+}
+
+
+/* =============================================
+   ABOUT MODAL (specific)
+   ============================================= */
+
+.about-modal-body { color: rgba(255, 255, 255, 0.7) !important; }
+
+.about-logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 16px !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 12px !important;
+    margin-bottom: 20px !important;
+}
+
+.about-logo i {
+    font-size: 28px !important;
+    color: #dc143c !important;
+}
+
+.about-logo span {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    letter-spacing: 2px !important;
+}
+
+.about-logo span span {
+    color: #dc143c !important;
+    font-size: 12px !important;
+}
+
+.about-logo small {
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    color: rgba(255, 255, 255, 0.3) !important;
+    letter-spacing: 3px !important;
+    margin-left: 4px !important;
+}
+
+.about-section {
+    margin-bottom: 16px !important;
+}
+
+.about-section h4 {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 6px !important;
+}
+
+.about-section p {
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 0.8rem !important;
+    line-height: 1.6 !important;
+}
+
+.about-facts {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.about-facts li {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 6px 0 !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 0.8rem !important;
+}
+
+.about-facts li i {
+    color: #dc143c !important;
+    width: 18px !important;
+    text-align: center !important;
+}
+
+.about-tech {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+}
+
+.about-tech .tech-tag {
+    padding: 4px 12px !important;
+    background: rgba(220, 20, 60, 0.08) !important;
+    border: 1px solid rgba(220, 20, 60, 0.12) !important;
+    border-radius: 6px !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 0.65rem !important;
+    font-weight: 500 !important;
+}
+
+
+/* =============================================
+   CONTACT MODAL (specific)
+   ============================================= */
+
+.contact-info-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    margin-bottom: 20px !important;
+}
+
+.contact-info-item {
+    display: flex !important;
+    gap: 12px !important;
+    padding: 12px !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 10px !important;
+    align-items: flex-start !important;
+}
+
+.contact-info-item .contact-icon {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    border-radius: 8px !important;
+    background: rgba(220, 20, 60, 0.08) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #dc143c !important;
+}
+
+.contact-info-item label {
+    display: block !important;
+    color: rgba(255, 255, 255, 0.2) !important;
+    font-size: 0.55rem !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.contact-info-item span {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 0.75rem !important;
+}
+
+.contact-form h4 {
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 12px !important;
+}
+
+.contact-form .contact-form-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+}
+
+.contact-form .form-group {
+    margin-bottom: 12px !important;
+}
+
+.contact-form .form-group label {
+    color: rgba(255, 255, 255, 0.3) !important;
+    font-size: 0.65rem !important;
+    font-weight: 500 !important;
+    display: block !important;
+    margin-bottom: 4px !important;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    width: 100% !important;
+    padding: 8px 12px !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    font-size: 0.8rem !important;
+    transition: all 0.3s ease !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+    outline: none !important;
+    border-color: rgba(220, 20, 60, 0.3) !important;
+}
+
+.contact-form .form-group input::placeholder,
+.contact-form .form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.contact-form .btn-submit {
+    width: 100% !important;
+    padding: 10px !important;
+    background: linear-gradient(135deg, #dc143c, #8b0000) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+}
+
+.contact-form .btn-submit:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 8px 25px rgba(220, 20, 60, 0.3) !important;
+}
+
+
+/* =============================================
+   TERMS MODAL (specific)
+   ============================================= */
+
+.terms-section {
+    margin-bottom: 16px !important;
+    padding: 12px !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    border-radius: 10px !important;
+}
+
+.terms-section h4 {
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.terms-section h4 i {
+    color: #dc143c !important;
+}
+
+.terms-section p {
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 0.75rem !important;
+    line-height: 1.6 !important;
+}
+
+.terms-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.terms-list li {
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 0.75rem !important;
+    line-height: 1.6 !important;
+    padding: 2px 0 !important;
+    padding-left: 20px !important;
+    position: relative !important;
+}
+
+.terms-list li::before {
+    content: '›' !important;
+    position: absolute !important;
+    left: 4px !important;
+    color: #dc143c !important;
+}
+
+
+/* =============================================
+   UPDATE QUANTITY MODAL (specific)
+   ============================================= */
+
+.update-quantity-item-info {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    margin-bottom: 20px !important;
+}
+
+.item-info-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px 20px !important;
+}
+
+.item-info-field label {
+    color: rgba(255, 255, 255, 0.25) !important;
+    font-size: 0.6rem !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    display: block !important;
+    margin-bottom: 1px !important;
+}
+
+.item-info-field span {
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.update-quantity-form-group {
+    margin-bottom: 16px !important;
+}
+
+.quantity-input-wrapper {
+    position: relative !important;
+}
+
+.quantity-input-wrapper input {
+    width: 100% !important;
+    padding: 10px 60px 10px 14px !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 10px !important;
+    color: #ffffff !important;
+    font-size: 0.875rem !important;
+    transition: all 0.3s ease !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.quantity-input-wrapper input:focus {
+    outline: none !important;
+    border-color: rgba(220, 20, 60, 0.3) !important;
+}
+
+.quantity-input-wrapper input::-webkit-outer-spin-button,
+.quantity-input-wrapper input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+}
+
+.quantity-input-wrapper input[type=number] {
+    -moz-appearance: textfield !important;
+    appearance: textfield !important;
+}
+
+.quantity-input-suffix {
+    position: absolute !important;
+    right: 14px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: rgba(255, 255, 255, 0.15) !important;
+    font-size: 0.7rem !important;
+    font-weight: 500 !important;
+    pointer-events: none !important;
+}
+
+.quick-action-buttons {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin-bottom: 12px !important;
+    padding: 8px 12px !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+.quick-action-buttons span {
+    color: rgba(255, 255, 255, 0.15) !important;
+    font-size: 0.6rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-right: 4px !important;
+}
+
+.quick-action-btn {
+    padding: 4px 12px !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 6px !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 0.65rem !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.quick-action-btn:hover {
+    background: rgba(220, 20, 60, 0.1) !important;
+    border-color: rgba(220, 20, 60, 0.2) !important;
+    color: #dc143c !important;
+}
+
+.quick-action-btn:active {
+    transform: scale(0.95) !important;
+}
+
+.stock-status-indicator {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    margin-bottom: 16px !important;
+    font-size: 0.75rem !important;
+}
+
+.stock-status-indicator.warning {
+    background: rgba(251, 191, 36, 0.08) !important;
+    border: 1px solid rgba(251, 191, 36, 0.15) !important;
+    color: #fbbf24 !important;
+}
+
+.stock-status-indicator.success {
+    background: rgba(34, 197, 94, 0.08) !important;
+    border: 1px solid rgba(34, 197, 94, 0.15) !important;
+    color: #22c55e !important;
+}
+
+.stock-status-indicator.danger {
+    background: rgba(239, 68, 68, 0.08) !important;
+    border: 1px solid rgba(239, 68, 68, 0.15) !important;
+    color: #ef4444 !important;
+}
+
+
+/* =============================================
+   MODAL FOOTER (shared)
+   ============================================= */
+
+.modal-footer,
+.about-modal-footer,
+.contact-modal-footer,
+.terms-modal-footer,
+.update-quantity-modal-footer {
+    margin-top: 16px !important;
+    padding-top: 16px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
+.modal-footer .btn-close,
+.about-modal-footer .btn-close,
+.contact-modal-footer .btn-close,
+.terms-modal-footer .btn-close,
+.update-quantity-modal-footer .btn-close {
+    padding: 8px 24px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 8px !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 0.8rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.modal-footer .btn-close:hover,
+.about-modal-footer .btn-close:hover,
+.contact-modal-footer .btn-close:hover,
+.terms-modal-footer .btn-close:hover,
+.update-quantity-modal-footer .btn-close:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+
+/* =============================================
+   RESPONSIVE - All Modals
+   ============================================= */
+
+@media (max-width: 480px) {
+    .modal-content,
+    .role-modal-content,
+    .delete-modal-content,
+    .status-modal-content,
+    .about-modal-content,
+    .contact-modal-content,
+    .terms-modal-content,
+    .update-quantity-modal-content {
+        padding: 24px 20px !important;
+        margin: 10px !important;
+    }
+
+    /* Role modal specific */
+    .role-option-btn {
+        padding: 10px 12px !important;
+        gap: 10px !important;
+    }
+
+    .role-option-btn .icon-wrapper {
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+        font-size: 14px !important;
+    }
+
+    .role-option-btn .role-info .name {
+        font-size: 0.8rem !important;
+    }
+
+    .role-option-btn .role-info .desc {
+        font-size: 0.6rem !important;
+    }
+
+    /* Delete modal specific */
+    .delete-icon-wrapper {
+        width: 56px !important;
+        height: 56px !important;
+    }
+
+    .delete-icon-wrapper i {
+        font-size: 22px !important;
+    }
+
+    /* Contact modal specific */
+    .contact-info-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .contact-form .contact-form-row {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* About modal specific */
+    .about-logo {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .about-facts li {
+        font-size: 0.7rem !important;
+    }
+
+    /* Update Quantity modal specific */
+    .item-info-grid {
+        grid-template-columns: 1fr !important;
+        gap: 4px !important;
+    }
+
+    .quick-action-buttons {
+        gap: 4px !important;
+        padding: 6px 10px !important;
+    }
+
+    .quick-action-btn {
+        padding: 3px 8px !important;
+        font-size: 0.6rem !important;
+    }
+
+    .quantity-input-suffix {
+        font-size: 0.6rem !important;
+    }
+
+    /* Action buttons */
+    .delete-modal-actions,
+    .status-modal-actions,
+    .update-quantity-modal-actions {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+}

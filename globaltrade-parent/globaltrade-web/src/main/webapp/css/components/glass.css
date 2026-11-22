@@ -1,0 +1,7 @@
+.glass { @apply backdrop-blur-[30px] bg-black/85 border border-white/5; }
+.glow-orb { @apply absolute rounded-full blur-[120px] opacity-30; }
+.bg-image-custom {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

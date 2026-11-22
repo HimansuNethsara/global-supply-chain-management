@@ -1,0 +1,28 @@
+.btn-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+.btn-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: all 0.5s ease;
+}
+.btn-shimmer:hover::before { left: 100%; }
+.logo-icon-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.logo-icon-hover:hover {
+    transform: scale(1.05) rotate(-5deg);
+    box-shadow: 0 12px 35px rgba(220, 20, 60, 0.4);
+}
+.feature-item-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.feature-item-hover:hover { @apply bg-white/10 border-white/10; transform: translateX(6px); }
+.register-arrow { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.group:hover .register-arrow { animation: arrowBounce 0.6s ease infinite; }

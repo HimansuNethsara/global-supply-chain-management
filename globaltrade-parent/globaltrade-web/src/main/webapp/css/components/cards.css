@@ -1,0 +1,40 @@
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+.dashboard-card:hover { border-color: rgba(255, 255, 255, 0.12); background: rgba(255, 255, 255, 0.05); }
+.balance-card {
+    background: linear-gradient(135deg, rgba(220, 20, 60, 0.08), rgba(139, 0, 0, 0.04));
+    border-color: rgba(220, 20, 60, 0.15);
+}
+.balance-amount { font-size: 24px; font-weight: 700; color: #ffffff; }
+.balance-label { color: rgba(255, 255, 255, 0.35); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+.quick-action-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 16px 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.5);
+}
+.quick-action-btn:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(220, 20, 60, 0.2); color: #ffffff; transform: translateY(-2px); }
+.quick-action-btn .icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 8px;
+    border-radius: 50%;
+    background: rgba(220, 20, 60, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dc143c;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.quick-action-btn:hover .icon { background: rgba(220, 20, 60, 0.15); transform: scale(1.05); }
+.quick-action-btn .label { font-size: 10px; font-weight: 500; }

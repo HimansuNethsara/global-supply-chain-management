@@ -1,0 +1,2 @@
+Before Deploying the Glassfish server, you need to open the intellij terminal and change the directory root to cd globaltrade-web
+and then run the command -> npm run build.
